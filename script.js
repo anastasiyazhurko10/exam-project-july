@@ -96,4 +96,7 @@ function prepareShopItem(shopItem) {
 
   const img = document.querySelector('img');
   img.src = shopItem.img;
+
+  const p = document.querySelector('p');
+  p.textContent = shopItem.author;
 }
