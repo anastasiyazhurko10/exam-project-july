@@ -105,11 +105,16 @@ function prepareShopItem(shopItem) {
 
   const tagsContainer = item.querySelector('.tags');
   shopItem.tags.forEach(tag => {
-    const span = document.createElement('span');
-    span.textContent = tag;
-    span.classList.add('tag');
-    tagsContainer.appendChild(span);
-  });
+  const span = document.createElement('span');
+  span.textContent = tag;
+  span.classList.add('tag');
+
+  if (tag.toLowerCase() === 'зарубежная классическая литература') {
+    span.classList.add('tag-foreign-classic');
+  }
+
+  tagsContainer.appendChild(span);
+});
 
   return item;
 }
