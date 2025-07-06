@@ -132,4 +132,12 @@ let currentItems = [...items];
 
 function performSearch() {
   const query = searchInput.value.trim().toLowerCase();
+
+    const filtered = items.filter(item => {
+    const title = item.title.toLowerCase();
+    const author = item.author.toLowerCase();
+    const tags = item.tags.map(tag => tag.toLowerCase()).join(' ');
+    return title.includes(query) || author.includes(query) || tags.includes(query);
+  });
+
 }
