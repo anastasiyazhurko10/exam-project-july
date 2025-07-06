@@ -113,3 +113,10 @@ function prepareShopItem(shopItem) {
 
   return item;
 }
+
+function renderItems(items) {
+  items.forEach((item) =>{
+    const newItem = prepareShopItem(item);
+    container.append(newItem);
+  })
+}
