@@ -158,4 +158,3 @@ searchInput.addEventListener('keydown', (e) => {
 });
 
 renderItems(items);
-
