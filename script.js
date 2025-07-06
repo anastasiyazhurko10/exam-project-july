@@ -132,3 +132,4 @@ let currentItems = [...items];
 
 function performSearch() {
   const query = searchInput.value.trim().toLowerCase();
+}
