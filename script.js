@@ -129,3 +129,6 @@ const searchBtn = document.getElementById('search-btn');
 const nothingFound = document.getElementById('nothing-found');
 
 let currentItems = [...items];
+
+function performSearch() {
+  const query = searchInput.value.trim().toLowerCase();
