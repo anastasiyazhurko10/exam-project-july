@@ -120,3 +120,5 @@ function renderItems(items) {
     container.append(newItem);
   })
 }
+
+renderItems(items);
