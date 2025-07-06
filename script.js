@@ -122,3 +122,7 @@ function renderItems(items) {
 }
 
 renderItems(items);
+
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+const nothingFound = document.getElementById('nothing-found');
