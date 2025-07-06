@@ -153,3 +153,9 @@ function performSearch() {
 
 searchBtn.addEventListener('click', performSearch);
 
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    performSearch();
+  }
+});
+
