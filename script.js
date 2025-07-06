@@ -104,4 +104,10 @@ function prepareShopItem(shopItem) {
   price.textContent = `${shopItem.price} BYN`;
 
   const tagsContainer = item.querySelector('.tags');
+  shopItem.tags.forEach(tag => {
+    const span = document.createElement('span');
+    span.textContent = tag;
+    span.classList.add('tag');
+    tagsContainer.appendChild(span);
+  });
 }
