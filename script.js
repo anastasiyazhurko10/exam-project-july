@@ -142,23 +142,20 @@ let currentItems = [...items];
 function performSearch() {
   const query = searchInput.value.trim().toLowerCase();
 
-    const filtered = items.filter(item => {
-    const title = item.title.toLowerCase();
-    const author = item.author.toLowerCase();
-    const tags = item.tags.map(tag => tag.toLowerCase()).join(' ');
-    return title.includes(query) || author.includes(query) || tags.includes(query);
-  });
-
-  currentItems = filtered;
-
-    if (filtered.length > 0) {
-    nothingFound.textContent = '';
-    renderItems(filtered);
+  if (query === '') {
+    currentItems = [...items];
   } else {
-    container.innerHTML = '';
-    nothingFound.textContent = 'Ничего не найдено';
+    currentItems = items.filter(item => {
+      const title = item.title.toLowerCase();
+      const author = item.author.toLowerCase();
+      const tagsMatch = item.tags.some(tag => tag.toLowerCase().includes(query));
+      return title.includes(query) || author.includes(query) || tagsMatch;
+    });
   }
-} 
+
+  renderItems(currentItems);
+  nothingFound.textContent = currentItems.length === 0 ? 'Ничего не найдено' : '';
+}
 
 searchBtn.addEventListener('click', performSearch);
 
