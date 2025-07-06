@@ -87,3 +87,7 @@ const items = [
 
 const container = document.getElementById('shop-items');
 const template = document.getElementById('item-template');
+
+function prepareShopItem(shopItem) {
+  const item = template.content.cloneNode(true);
+}
