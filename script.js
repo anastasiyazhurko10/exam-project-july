@@ -91,16 +91,16 @@ const template = document.getElementById('item-template');
 function prepareShopItem(shopItem) {
   const item = template.content.cloneNode(true);
 
-  const h1 = document.querySelector('h1');
+  const h1 = item.querySelector('h1');
   h1.textContent = shopItem.title;
 
-  const img = document.querySelector('img');
+  const img = item.querySelector('img');
   img.src = shopItem.img;
 
-  const p = document.querySelector('p');
+  const p = item.querySelector('p');
   p.textContent = shopItem.author;
 
-  const price = document.querySelector('.price');
+  const price = item.querySelector('.price');
   price.textContent = `${shopItem.price} BYN`;
 
   const tagsContainer = item.querySelector('.tags');
