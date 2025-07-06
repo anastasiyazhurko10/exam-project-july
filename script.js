@@ -102,4 +102,6 @@ function prepareShopItem(shopItem) {
 
   const price = document.querySelector('.price');
   price.textContent = `${shopItem.price} BYN`;
+
+  const tagsContainer = document.querySelector('.tags');
 }
