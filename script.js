@@ -150,3 +150,6 @@ function performSearch() {
     nothingFound.textContent = 'Ничего не найдено';
   }
 } 
+
+searchBtn.addEventListener('click', performSearch);
+
