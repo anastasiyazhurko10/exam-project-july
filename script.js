@@ -140,4 +140,5 @@ function performSearch() {
     return title.includes(query) || author.includes(query) || tags.includes(query);
   });
 
+    currentItems = filtered;
 }
