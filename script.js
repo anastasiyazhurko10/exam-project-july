@@ -99,4 +99,7 @@ function prepareShopItem(shopItem) {
 
   const p = document.querySelector('p');
   p.textContent = shopItem.author;
+
+  const price = document.querySelector('.price');
+  price.textContent = `${shopItem.price} BYN`;
 }
