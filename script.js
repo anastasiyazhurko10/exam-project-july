@@ -44,42 +44,42 @@ const items = [
   {
     title: "Война и мир",
     author: "Лев Толстой",
-    tags: ["классическая русская литература"],
+    tags: ["золотая коллекция классической литературы"],
     price: 13.12,
     img: "./img/7.jpg",
   },
   {
     title: "Преступление и наказание",
     author: "Федор Достоевский",
-    tags: ["классическая русская литература"],
+    tags: ["золотая коллекция классической литературы"],
     price: 14.18,
     img: "./img/8.jpg",
   },
   {
     title: "Мастер и Маргарита",
     author: "Михаил Булгаков",
-    tags: ["классическая русская литература"],
+    tags: ["золотая коллекция классической литературы"],
     price: 17.19,
     img: "./img/9.jpg",
   },
   {
     title: "Братья Карамазовы",
     author: "Федор Достоевский",
-    tags: ["классическая русская литература"],
+    tags: ["золотая коллекция классической литературы"],
     price: 14.22,
     img: "./img/10.jpg",
   },
   {
     title: "Анна Каренина",
     author: "Лев Толстой",
-    tags: ["классическая русская литература"],
+    tags: ["золотая коллекция классической литературы"],
     price: 15.18,
     img: "./img/11.jpg",
   },
   {
     title: "Герой нашего времени",
     author: "Михаил Лермонтов",
-    tags: ["классическая русская литература"],
+    tags: ["золотая коллекция классической литературы"],
     price: 13.22,
     img: "./img/12.jpg",
   },
@@ -109,8 +109,14 @@ function prepareShopItem(shopItem) {
   span.textContent = tag;
   span.classList.add('tag');
 
-  if (tag.toLowerCase() === 'зарубежная классическая литература') {
+  const normalizedTag = tag.toLowerCase();
+
+  if (normalizedTag === 'зарубежная классическая литература') {
     span.classList.add('tag-foreign-classic');
+  }
+
+  if (normalizedTag === 'золотая коллекция классической литературы') {
+    span.classList.add('tag-golden-collection');
   }
 
   tagsContainer.appendChild(span);

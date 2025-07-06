@@ -137,7 +137,6 @@ main {
 }
 
 .shop-item .tag {
-  background: var(--yellow);
   border-radius: 4px;
   padding: 4px 8px;
   cursor: pointer;
@@ -146,6 +145,12 @@ main {
 .tag-foreign-classic {
   background: #d4edda;
   color: #155724;      
+  font-weight: bold;
+}
+
+.shop-item .tag.tag-golden-collection {
+  background: #f8d7da; 
+  color: #721c24;  
   font-weight: bold;
 }
 
