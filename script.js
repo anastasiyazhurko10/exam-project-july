@@ -110,4 +110,6 @@ function prepareShopItem(shopItem) {
     span.classList.add('tag');
     tagsContainer.appendChild(span);
   });
+
+  return item;
 }
