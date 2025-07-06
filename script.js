@@ -90,4 +90,9 @@ const template = document.getElementById('item-template');
 
 function prepareShopItem(shopItem) {
   const item = template.content.cloneNode(true);
+
+  const h1 = document.querySelector('h1');
+  h1.textContent = shopItem.title;
+
+  
 }
