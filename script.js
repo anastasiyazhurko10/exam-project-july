@@ -140,5 +140,13 @@ function performSearch() {
     return title.includes(query) || author.includes(query) || tags.includes(query);
   });
 
-    currentItems = filtered;
-}
+  currentItems = filtered;
+
+    if (filtered.length > 0) {
+    nothingFound.textContent = '';
+    renderItems(filtered);
+  } else {
+    container.innerHTML = '';
+    nothingFound.textContent = 'Ничего не найдено';
+  }
+} 
