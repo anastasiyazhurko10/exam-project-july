@@ -152,6 +152,8 @@ function performSearch() {
       return title.includes(query) || author.includes(query) || tagsMatch;
     });
   }
+  
+  currentItems.sort((a, b) => a.price - b.price);
 
   renderItems(currentItems);
   nothingFound.textContent = currentItems.length === 0 ? 'Ничего не найдено' : '';
