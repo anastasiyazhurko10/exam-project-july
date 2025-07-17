@@ -154,7 +154,15 @@ function performSearch() {
     });
   }
   
-  currentItems.sort((a, b) => a.price - b.price);
+  if (sortSelect.value === 'alphabetical') {
+    currentItems.sort((a, b) => {
+      if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+      if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+      return 0;
+    });
+  } else if (sortSelect.value === 'price') {
+    currentItems.sort((a, b) => a.price - b.price);
+  }
 
   renderItems(currentItems);
   nothingFound.textContent = currentItems.length === 0 ? 'Ничего не найдено' : '';
