@@ -142,10 +142,6 @@ let currentItems = [...items];
 function performSearch() {
   const query = searchInput.value.trim().toLowerCase();
 
-  let currentItems = items.filter(item => {
-    return item.name.toLowerCase().includes(query);
-  });
-
   if (query === '') {
     currentItems = [...items];
   } else {
