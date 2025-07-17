@@ -181,4 +181,6 @@ searchInput.addEventListener('keydown', (e) => {
   }
 });
 
+sortSelect.addEventListener('change', performSearch);
+
 renderItems(items);
