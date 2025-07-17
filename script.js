@@ -136,7 +136,7 @@ function renderItems(items) {
 const searchInput = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-btn');
 const nothingFound = document.getElementById('nothing-found');
-const sortSelect = document.getElementById('sort-select');
+const sortSelect = document.getElementById('sortSelect');
 
 let currentItems = [...items];
 
