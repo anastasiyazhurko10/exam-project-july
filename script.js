@@ -165,7 +165,12 @@ function performSearch() {
   }
 
   renderItems(currentItems);
-  nothingFound.textContent = currentItems.length === 0 ? 'Ничего не найдено' : '';
+  
+  if (currentItems.length === 0) {
+    nothingFound.textContent = 'Ничего не найдено';
+  } else {
+    nothingFound.textContent = '';
+  }
 }
 
 searchBtn.addEventListener('click', performSearch);
