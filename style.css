@@ -93,7 +93,7 @@ main {
 }
 
 .shop-item .content {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -126,6 +126,18 @@ main {
   cursor: pointer;
   display: block;
   margin-top: auto;
+}
+
+.shop-item .footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-item .rating {
+  cursor: pointer;
+  color: var(--mediumviolet);
 }
 
 .shop-item .tags {
@@ -167,4 +179,11 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
 }
